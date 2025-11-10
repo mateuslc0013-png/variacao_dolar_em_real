@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Variação do Dólar em Real (2022-2025)</title>
+
+  <!-- Plotly (estável) -->
+  <script src="https://cdn.plot.ly/plotly-2.29.1.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📊 Variação do Dólar em Real (2022 - 2025)</h1>
+    <div id="controls">
+      <button id="btnAtualizarAgora">🔄 Atualizar Agora</button>
+      <label for="intervalo">Auto-update:</label>
+      <select id="intervalo">
+        <option value="3600000">1 hora</option>
+        <option value="21600000" selected>6 horas (padrão)</option>
+        <option value="43200000">12 horas</option>
+        <option value="86400000">24 horas</option>
+      </select>
+      <span id="ultimaAtualizacao">Última atualização: —</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="seletor">
+      <label for="mes1">Mês 1:</label>
+      <select id="mes1"></select>
+      <label for="mes2">Mês 2:</label>
+      <select id="mes2"></select>
+      <button id="analisar">Analisar Seleção</button>
+    </section>
+
+    <div id="grafico_valor" class="grafico"></div>
+    <div id="grafico_pct" class="grafico"></div>
+
+    <aside id="infoBox">
+      <h3>Informações Detalhadas</h3>
+      <div id="detalhes">Clique em um ponto do gráfico ou selecione dois meses para comparar.</div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

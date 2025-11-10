@@ -1,0 +1,77 @@
+:root{
+  --bg:#f5f8fc;
+  --accent:#1f77b4;
+  --accent-dark:#155a8a;
+  --card:#ffffff;
+  --text:#222;
+}
+*{box-sizing:border-box}
+body{
+  margin:28px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+h1{
+  margin:0 0 10px 0;
+  text-align:center;
+  color:#123662;
+  font-weight:600;
+}
+header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  margin-bottom:18px;
+}
+#controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+button:hover{background:var(--accent-dark)}
+select, label{font-size:14px}
+main{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
+#seletor{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.grafico{
+  width:100%;
+  max-width:1100px;
+  height:420px;
+  background:var(--card);
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  padding:10px;
+}
+#infoBox{
+  width:90%;
+  max-width:1100px;
+  background:var(--card);
+  padding:16px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+#detalhes{line-height:1.5}
+@media (max-width:800px){
+  .grafico{height:300px}
+  body{margin:16px}
+}
