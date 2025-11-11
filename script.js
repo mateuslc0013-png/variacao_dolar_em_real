@@ -62,7 +62,7 @@ function labelFromKey(key){
 // ensure coverage Jan/2022 .. Dec/2025, add projection for Dec/2025 if missing
 function ensureRange(dataArr){
   // filter >= 2022-01 and <= 2025-12
-  let filtered = dataArr.filter(r => r.key >= '2022-01' && r.key <= '2025-12');
+  let filtered = dataArr.filter(r => r.key >= '2020-01' && r.key <= '2025-12');
   const hasDec = filtered.some(r => r.key === '2025-12');
   if(!hasDec){
     const last = filtered[filtered.length-1];
@@ -118,7 +118,7 @@ async function updateFromBCB(showStatus=true){
   try{
     if(showStatus) document.getElementById('ultimaAtualizacao').textContent = 'Atualizando...';
     // set date range: from 01/01/2022 to today (dd/mm/yyyy)
-    const from = '01/01/2022';
+    const from = '01/01/2020';
     const today = new Date();
     const to = formatDateDMY(today);
     const daily = await fetchDaily(from,to);
