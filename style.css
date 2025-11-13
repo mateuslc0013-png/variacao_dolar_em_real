@@ -31,6 +31,17 @@ header{
   align-items:center;
   flex-wrap:wrap;
 }
+
+.euro {
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+  text-decoration: none;
+}
+
 button{
   background:var(--accent);
   color:#fff;
