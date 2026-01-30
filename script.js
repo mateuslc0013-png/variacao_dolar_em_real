@@ -9,7 +9,7 @@
 */
 
 const API_BCB_BASE = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.10813/dados";
-const PROJECAO_DEZ_2025 = 5.45; // projeção Focus
+const PROJECAO_DEZ_2026 = 5.45; // projeção Focus
 const LABELS_PT = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
 
 let monthlyData = []; // [{key,label,startValue,endValue,diff,pct,projected?}]
