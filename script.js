@@ -62,15 +62,15 @@ function labelFromKey(key){
 // ensure coverage Jan/2022 .. Dec/2025, add projection for Dec/2025 if missing
 function ensureRange(dataArr){
   // filter >= 2022-01 and <= 2025-12
-  let filtered = dataArr.filter(r => r.key >= '2020-01' && r.key <= '2025-12');
-  const hasDec = filtered.some(r => r.key === '2025-12');
+  let filtered = dataArr.filter(r => r.key >= '2020-01' && r.key <= '2026-12');
+  const hasDec = filtered.some(r => r.key === '2026-12');
   if(!hasDec){
     const last = filtered[filtered.length-1];
     const startDec = last ? last.endValue : PROJECAO_DEZ_2025;
     const endDec = PROJECAO_DEZ_2025;
     const diff = endDec - startDec;
     const pct = (diff / startDec) * 100;
-    filtered.push({key:'2025-12', label:labelFromKey('2025-12'), startValue:startDec, endValue:endDec, diff, pct, projected:true});
+    filtered.push({key:'2026-12', label:labelFromKey('2026-12'), startValue:startDec, endValue:endDec, diff, pct, projected:true});
   }
   // sort and return
   filtered.sort((a,b)=> a.key.localeCompare(b.key));
